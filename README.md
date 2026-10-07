@@ -6,53 +6,53 @@
 
 > AgroTech-SCAU 比赛机器人项目导航仓库
 >
-> 本仓库只负责汇总比赛机器人项目、公共资产与仓库关系，不再存放具体机器人的整机代码
+> 本仓库用于统一索引协会比赛机器人、比赛归属、公共模型与公共开发资产，不存放具体机器人的整机源码
 
 ---
 
 ## 1. 仓库定位
 
-`Competition-Robot-Collection` 是协会比赛机器人项目的统一入口，主要用于：
+`Competition-Robot-Collection` 是 AgroTech-SCAU 比赛机器人项目的统一入口，主要负责：
 
-- 导航各届比赛机器人的独立项目仓库
-- 记录机器人之间的继承与演化关系
+- 导航各比赛机器人的独立项目仓库
+- 记录机器人对应比赛、项目定位与演化关系
 - 统一指向公共机械模型、电控标准与 SDK 等共享资产
-- 约定后续比赛机器人的建仓方式，避免再次形成超大型总仓
+- 约定后续比赛机器人的建仓方式，避免重新形成超大型总仓
 
 本仓库 **不保存**：
 
-- MCU / ROS / 视觉 / 导航等具体项目源码
-- SolidWorks、STL 等大型机械模型
-- 某一台机器人的运行配置、地图、标定结果或比赛参数
+- MCU / ROS2 / 视觉 / 导航等具体机器人源码
+- SolidWorks、STL 等大型机械模型源文件
+- 某一台机器人的地图、标定结果、比赛参数与运行配置
 
-这些内容应分别维护在对应机器人项目仓库或公共资产仓库中
+以上内容分别维护在对应机器人项目仓库或公共资产仓库中
 
 ---
 
-## 2. 当前比赛机器人
+## 2. 2026 比赛机器人
 
-| 机器人 | 项目仓库 | 定位 | 当前状态 |
-| --- | --- | --- | --- |
-| SteerWheel Mk.1 | [`Competition-Robot-2026-Mk.1`](https://github.com/AgroTech-SCAU/Competition-Robot-2026-Mk.1) | 初代四舵轮 + 五自由度机械臂原型，用于验证底盘、电控与机械臂一体化方案 | 历史原型 / 技术资产保留 |
-| Atlas | [`Competition-Robot-2026-Atlas`](https://github.com/AgroTech-SCAU/Competition-Robot-2026-Atlas) | 在 Mk.1 基础上发展出的中型自主轮式机器人，包含 MCU、Pi ROS2、导航、视觉、机械臂与比赛任务链路 | 2026 主力比赛平台 |
-| Hephaestus | [`Competition-Robot-2026-Hephaestus`](https://github.com/AgroTech-SCAU/Competition-Robot-2026-Hephaestus) | 从原总仓独立出的另一套比赛机器人项目，当前代码包含 MCU、ROS2、导航、视觉/作业后端等整车链路 | 已拆分 / 独立维护 |
+| 机器人 | 比赛 | 项目仓库 | 定位 | 状态 |
+| --- | --- | --- | --- | --- |
+| SteerWheel Mk.1 | 中国机器人及人工智能大赛（机器人应用赛·智慧农业赛项） | [`Competition-Robot-2026-Mk.1`](https://github.com/AgroTech-SCAU/Competition-Robot-2026-Mk.1) | 初代四舵轮 + 五自由度机械臂原型，承担底盘、电控、机械臂一体化与比赛方案验证 | 独立维护 / 原型平台 |
+| Atlas | 2026 睿抗机器人开发者大赛 · 智械争锋赛道 | [`Competition-Robot-2026-Atlas`](https://github.com/AgroTech-SCAU/Competition-Robot-2026-Atlas) | 在 Mk.1 基础上发展出的自主轮式机器人，包含 MCU、Pi ROS2、导航、视觉、机械臂与比赛任务链路 | 开发中 / 全自主主线 |
+| Hephaestus | 2026 睿抗机器人开发者大赛 · 智械争锋赛道 | [`Competition-Robot-2026-Hephaestus`](https://github.com/AgroTech-SCAU/Competition-Robot-2026-Hephaestus) | 独立的中型舵轮机器人项目，包含 MCU、ROS2、导航、视觉、机械臂、语音与比赛任务链路 | 开发中 / 全自主主线 |
 
-> 三个项目已从原 `Steering-Wheel-Chassis` 大仓拆分为独立仓库；后续功能开发、Issue、PR 和 Release 均应进入对应项目仓库，本 Collection 不再承载机器人源码开发
+> 三台机器人已经分别独立建仓；具体功能开发、Issue、PR、Release 与实车资料均进入对应项目仓库，本 Collection 只维护索引与关系
 
 ---
 
 ## 3. 公共资产
 
-### 3.1 机械模型
+### 3.1 比赛机器人机械模型
 
-[`Steering-Wheel-Chassis-Model-Collection`](https://github.com/AgroTech-SCAU/Competition-Robot-2026-Model-Collection)
+[`Competition-Robot-2026-Model-Collection`](https://github.com/AgroTech-SCAU/Competition-Robot-2026-Model-Collection)
 
-用于集中保存体积较大的车辆机械模型，目前主要包含：
+用于集中维护 2026 比赛机器人相关的大型机械模型与机械源文件，当前主要包含：
 
 - SteerWheel Mk.1
 - Atlas
 
-比赛项目仓库原则上只保留运行必需的轻量描述资产；完整 SolidWorks 等机械源文件优先放入模型合集仓库
+比赛项目仓库原则上只保留运行必需的轻量描述资产；完整 SolidWorks 等大型机械源文件优先放入模型合集仓库
 
 ### 3.2 嵌入式电控标准与 SDK
 
@@ -67,61 +67,61 @@ sdks/
 └── device/
 ```
 
-新比赛机器人需要公共电机、舵机、IMU、PID、运动学等能力时，应优先复用或完善该仓库，而不是在每个比赛项目内继续复制一份公共驱动
+新比赛机器人需要公共电机、舵机、IMU、PID、运动学等能力时，应优先复用或完善公共 SDK，而不是在每个机器人项目中长期复制独立版本
 
-项目需要固定使用公共 SDK 时，推荐由项目仓库通过 `external/` submodule 锁定经过验证的 tag 或 commit
+项目需要固定使用公共 SDK 时，推荐通过 `external/` submodule 锁定经过验证的 tag 或 commit
 
 ---
 
-## 4. 仓库关系
+## 4. 当前仓库体系
 
 ```text
-Competition-Robot-Collection
+AgroTech-SCAU/
+│
+├── Competition-Robot-Collection
+│   └── 比赛机器人导航、比赛归属、仓库关系与建仓规则
 │
 ├── Competition-Robot-2026-Mk.1
-├── Competition-Robot-2026-Atlas
-├── Competition-Robot-2026-Hephaestus
+│   └── 中国机器人及人工智能大赛机器人项目
 │
-├── Steering-Wheel-Chassis-Model-Collection
-│   └── 公共 / 历史机械模型
+├── Competition-Robot-2026-Atlas
+│   └── 睿抗机器人大赛 · 智械争锋赛道机器人项目
+│
+├── Competition-Robot-2026-Hephaestus
+│   └── 睿抗机器人大赛 · 智械争锋赛道机器人项目
+│
+├── Competition-Robot-2026-Model-Collection
+│   └── 比赛机器人机械模型与大型机械资产
 │
 └── Embedded-Electronic-Control-Standard
-    ├── sdks/infra
-    ├── sdks/domain
-    └── sdks/device
+    └── 公共电控标准与 infra / domain / device SDK
 ```
 
-更完整的仓库边界和新项目建仓规则见 [`docs/repository-map.md`](docs/repository-map.md)
+更完整的职责边界见 [`docs/repository-map.md`](docs/repository-map.md)
 
 ---
 
-## 5. 演化关系
+## 5. 项目关系
 
-当前可以将三台机器人的关系理解为：
+### SteerWheel Mk.1
 
-```text
-SteerWheel Mk.1
-      │
-      │  底盘 / 电控 / 五自由度机械臂原型验证
-      ▼
-    Atlas
-      │
-      ├── ROS2 / Pi 通信桥
-      ├── 导航与定位
-      ├── 视觉与任务状态机
-      └── 更完整的自主比赛系统
+初代四舵轮机器人原型，主要用于中国机器人及人工智能大赛，同时承担舵轮底盘、五自由度机械臂、自研电控和手动任务方案验证
 
-Hephaestus
-      └── 从原总仓独立出的另一条比赛机器人项目线
-```
+### Atlas
 
-共享能力不再通过复制某一台机器人的目录继承，而应逐步沉淀到公共标准 / SDK 仓库中
+在 Mk.1 基础上继续发展，加入 ROS2、Pi 通信桥、导航定位、视觉、任务状态机等能力，当前面向睿抗机器人开发者大赛智械争锋赛道的全自主任务
+
+### Hephaestus
+
+与 Atlas 分别作为独立机器人项目维护，同样面向睿抗机器人开发者大赛智械争锋赛道，拥有自己的 MCU、Pi、视觉、语音与任务执行链路
+
+公共能力不再通过复制某一台机器人的目录继承，而应逐步沉淀到公共模型仓或公共标准 / SDK 仓库中
 
 ---
 
 ## 6. 新比赛机器人建仓规则
 
-以后新增比赛机器人时，默认直接创建独立仓库，不再在 Collection 中新增整机源码目录
+以后新增比赛机器人时，默认直接创建独立仓库，不在 Collection 中新增整机源码目录
 
 推荐命名：
 
@@ -139,79 +139,67 @@ Competition-Robot-2027-Example
 
 ```text
 Competition-Robot-20XX-Name/
-├── firmware/        # MCU / embedded
+├── firmware/        # MCU / embedded，可选
 ├── ros2_ws/         # ROS2 系统，可选
 ├── vision/          # 独立视觉资产，可选
 ├── config/          # 整机运行配置，可选
 ├── docs/
-└── external/        # 公共 SDK / 外部依赖
+└── external/        # 公共 SDK / 外部依赖，可选
 ```
 
-目录应以实际项目需要为准，不要求所有机器人机械套用完全一致的结构
+目录应服从项目实际需要，不要求所有机器人机械套用完全一致的结构
 
-### 应拆为公共仓库的内容
+### 优先沉淀到公共仓库
 
-满足以下条件之一时，优先沉淀到公共仓库：
+- 两个及以上机器人都会使用的设备驱动或算法
+- 与具体比赛任务无关的基础能力
+- 接口能够稳定定义的 `infra / domain / device` 模块
+- 大型、跨项目复用的机械模型资产
 
-- 两个及以上机器人都会使用
-- 与具体比赛任务无关
-- 可以定义稳定、清晰的公共接口
-- 设备驱动、基础算法、运动学、协议解析等通用能力
+### 留在机器人项目仓库
 
-### 应留在机器人仓库的内容
-
-- 比赛状态机和任务逻辑
-- 本车硬件装配与 platform 绑定
-- 本车 ROS2 bringup
+- 比赛状态机与任务逻辑
+- 本车硬件装配和 platform 绑定
+- 本车 ROS2 bringup 与任务后端
 - 地图、导航点、视觉 ROI、标定结果等本车配置
-- 本车特有执行器或机构逻辑
+- 本车特有执行器、机构与实验逻辑
 
 ---
 
-## 7. 旧总仓迁移说明
+## 7. 拆分结果
 
-原 [`Steering-Wheel-Chassis`](https://github.com/AgroTech-SCAU/Steering-Wheel-Chassis) 曾同时维护多台机器人，随着项目增长出现仓库体积过大、公共代码复制、项目边界不清等问题
-
-当前整理方向为：
+原多车型总仓已完成项目级拆分，当前形成：
 
 ```text
-旧模式
-Steering-Wheel-Chassis/
-├── Mk.1/
-├── Atlas/
-└── Hephaestus/
-
-        ↓ 拆分
-
-新模式
-Competition-Robot-Collection       # 只做导航
-Competition-Robot-2026-Mk.1       # 独立项目
-Competition-Robot-2026-Atlas      # 独立项目
-Competition-Robot-2026-Hephaestus # 独立项目
+Competition-Robot-Collection           # 只做导航
+Competition-Robot-2026-Mk.1           # 独立机器人项目
+Competition-Robot-2026-Atlas          # 独立机器人项目
+Competition-Robot-2026-Hephaestus     # 独立机器人项目
+Competition-Robot-2026-Model-Collection # 公共机械模型
+Embedded-Electronic-Control-Standard  # 公共电控标准 / SDK
 ```
 
-后续不应再向旧总仓增加新的比赛机器人主线代码
+后续不再建立“一仓多车”的比赛机器人总仓模式
 
 ---
 
-## 8. 当前整理事项
+## 8. 当前状态
 
-- [x] 建立 `Competition-Robot-Collection`
-- [x] Mk.1 拆分为独立仓库
-- [x] Atlas 拆分为独立仓库
-- [x] Hephaestus 拆分为独立仓库
-- [x] Collection 改为项目导航仓库
-- [x] 关联公共机械模型仓库
-- [x] 关联公共嵌入式标准 / SDK 仓库
-- [ ] 清理三个独立项目仓库根 README 中残留的旧总仓描述和路径
-- [ ] 根据各项目实际情况继续把重复 `device / domain / infra` 能力迁移到公共 SDK
-- [ ] 原 `Steering-Wheel-Chassis` 完成迁移说明后停止承载新功能，是否归档由维护者最终决定
+- [x] 建立比赛机器人 Collection 导航仓库
+- [x] Mk.1、Atlas、Hephaestus 分别独立建仓
+- [x] 三个独立项目根 README 已切换为机器人专属说明
+- [x] 机械模型独立为 `Competition-Robot-2026-Model-Collection`
+- [x] 公共电控能力明确向 `Embedded-Electronic-Control-Standard` 收敛
+- [x] 明确 2026 三台机器人的比赛归属
+- [x] 原多车型总仓停止作为新功能开发入口
+- [ ] 后续按实车验证情况继续把成熟的重复 `device / domain / infra` 能力迁移到公共 SDK
+- [ ] 新比赛项目出现时持续更新本 Collection 的项目索引与比赛信息
 
 ---
 
 ## 9. 协作
 
-本仓库主要修改导航信息和仓库关系，仍遵循协会统一开发流程：
+本仓库主要修改项目索引、比赛信息和仓库关系，仍遵循协会统一流程：
 
 **Issue → Branch → Commit → Push → Pull Request → Merge**
 
