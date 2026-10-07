@@ -41,7 +41,7 @@ Linux / Ubuntu：
 ```bash
 git clone <仓库 URL>
 cd <仓库目录>
-bash scripts/setup-git.sh
+bash setup-scripts/setup-git.sh
 ```
 
 Windows PowerShell：
@@ -49,7 +49,7 @@ Windows PowerShell：
 ```powershell
 git clone <仓库 URL>
 cd <仓库目录>
-.\scripts\setup-git.ps1
+.\setup-scripts\setup-git.ps1
 ```
 
 如果没有运行脚本，也可以正常开发；只是本地不会提前弹出 AgroTech 的提示，最终仍会由 GitHub Ruleset 保护 `main`

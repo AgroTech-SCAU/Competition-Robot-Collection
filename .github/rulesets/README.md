@@ -135,8 +135,8 @@ git reset --hard origin/main
 ```text
 .githooks/pre-commit
 .githooks/pre-push
-scripts/setup-git.sh
-scripts/setup-git.ps1
+setup-scripts/setup-git.sh
+setup-scripts/setup-git.ps1
 ```
 
 Git 不会在 Clone 后自动启用仓库自带 Hook，因此需要每份 Clone 主动运行一次 setup 脚本
@@ -144,13 +144,13 @@ Git 不会在 Clone 后自动启用仓库自带 Hook，因此需要每份 Clone 
 Linux / Ubuntu：
 
 ```bash
-bash scripts/setup-git.sh
+bash setup-scripts/setup-git.sh
 ```
 
 Windows PowerShell：
 
 ```powershell
-.\scripts\setup-git.ps1
+.\setup-scripts\setup-git.ps1
 ```
 
 Hook 只是为了更早提示，**不是安全边界**；即使成员完全没有启用 Hook，GitHub Ruleset 仍会保护 `main`
