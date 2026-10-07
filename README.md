@@ -45,7 +45,7 @@
 
 ### 3.1 机械模型
 
-[`Steering-Wheel-Chassis-Model-Collection`](https://github.com/AgroTech-SCAU/Steering-Wheel-Chassis-Model-Collection)
+[`Steering-Wheel-Chassis-Model-Collection`](https://github.com/AgroTech-SCAU/Competition-Robot-2026-Model-Collection)
 
 用于集中保存体积较大的车辆机械模型，目前主要包含：
 
